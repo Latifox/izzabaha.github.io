@@ -1,0 +1,9 @@
+name: essence-craft-space
+static_sites:
+- name: web
+  github:
+    repo: Latifox/izzabaha.github.io # TODO: Replace with your repo details
+    branch: main
+    deploy_on_push: true
+  build_command: npm run build
+  output_dir: dist
