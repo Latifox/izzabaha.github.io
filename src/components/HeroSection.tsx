@@ -31,7 +31,7 @@ const HeroSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button asChild className="gradient-primary hover-glow transition-spring text-lg px-8 py-3">
-                <a href="/assets/izzabaha.pdf" download className="flex items-center">
+                <a href="https://drive.google.com/file/d/1eKW6KHbb178SgAI2hNerrFpcQG6bDLz8/view?usp=sharing" download className="flex items-center">
                   <Download className="mr-2 h-5 w-5" />
                   Télécharger le CV
                 </a>
