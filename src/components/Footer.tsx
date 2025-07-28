@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
-    <footer className="py-16 bg-card border-t border-border">
+    <footer id="contact" className="py-16 bg-card border-t border-border">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Main Content */}

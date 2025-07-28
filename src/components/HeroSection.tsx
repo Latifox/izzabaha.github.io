@@ -4,7 +4,7 @@ import alexPortrait from "@/assets/alex-portrait.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center gradient-hero relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center gradient-hero relative overflow-hidden">
       {/* Floating geometric shapes for visual interest */}
       <div className="absolute top-20 left-20 w-20 h-20 border border-primary/30 rounded-lg animate-float"></div>
       <div className="absolute bottom-32 right-32 w-16 h-16 bg-primary/20 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>

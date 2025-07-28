@@ -54,7 +54,7 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section className="py-20 bg-secondary/30">
+    <section id="experience" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}

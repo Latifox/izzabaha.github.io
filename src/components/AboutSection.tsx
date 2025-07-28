@@ -26,7 +26,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary/50">
+    <section id="about" className="py-20 bg-secondary/50">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
