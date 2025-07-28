@@ -6,57 +6,67 @@ import { Button } from "@/components/ui/button";
 const CertificationsSection = () => {
   const certifications = [
     {
-      name: "Lean Six Sigma Black Belt",
-      issuer: "American Society for Quality (ASQ)",
-      date: "2021",
-      status: "Active",
-      description: "Advanced certification in process improvement methodologies, statistical analysis, and project management for quality enhancement.",
-      credentialId: "ASQ-LSSBB-2021-4789",
-      skills: ["Process Improvement", "Statistical Analysis", "Project Management", "Quality Control"]
+      name: "Analyse de données Google",
+      issuer: "Google",
+      date: "2024",
+      status: "Actif",
+      description: "Certificat professionnel en analyse de données couvrant la collecte, le nettoyage, l'analyse et la visualisation de données à l'aide d'outils standard de l'industrie.",
+      credentialId: "ZQA53H5YL2GE",
+      verificationUrl: "https://www.coursera.org/account/accomplishments/specialization/37Q3FEU3RE7F", // Add your Google verification URL here when available
+      skills: ["Analyse de Données", "Visualisation de Données", "Analyse Statistique", "Intelligence d'Affaires"]
     },
     {
-      name: "Project Management Professional (PMP)",
-      issuer: "Project Management Institute (PMI)",
-      date: "2020",
-      status: "Active",
-      description: "Globally recognized certification demonstrating competency in leading and directing project teams.",
-      credentialId: "PMI-PMP-2020-7845",
-      skills: ["Project Planning", "Risk Management", "Team Leadership", "Stakeholder Management"]
+      name: "Six Sigma - Yellow Belt",
+      issuer: "Institut Six Sigma",
+      date: "2024",
+      status: "Actif",
+      description: "Certification de base en méthodologie Six Sigma pour l'amélioration des processus et la gestion de la qualité.",
+      credentialId: "890026",
+      verificationUrl: "https://www.6sigmastudy.com/certification/verify?type=SSYB&number=890026",
+      skills: ["Amélioration des Processus", "Gestion de la Qualité", "DMAIC", "Outils Statistiques"]
     },
     {
-      name: "Certified Manufacturing Engineer (CMfgE)",
-      issuer: "Society of Manufacturing Engineers (SME)",
-      date: "2019",
-      status: "Active", 
-      description: "Professional certification validating expertise in manufacturing processes, systems, and technologies.",
-      credentialId: "SME-CMfgE-2019-3621",
-      skills: ["Manufacturing Systems", "Production Planning", "Quality Systems", "Process Design"]
+      name: "Formation Power BI",
+      issuer: "Orange",
+      date: "2023",
+      status: "Actif", 
+      description: "Formation complète sur les fonctionnalités avancées de Microsoft Excel, la programmation VBA et Power BI pour l'intelligence d'affaires.",
+      credentialId: "ORANGE-EVPBI-2023",
+      verificationUrl: "https://media.licdn.com/dms/image/v2/D4E22AQHNSg6m2ElMtw/feedshare-shrink_800/feedshare-shrink_800/0/1706460830258?e=1756339200&v=beta&t=hdACQXOvSl826MC3SR20_sRrCSY3E79-NNXdj-uH1C8", // Add Orange verification URL here when available
+      skills: ["Excel Avancé", "Programmation VBA", "Power BI", "Modélisation de Données"]
     },
     {
-      name: "Professional Engineer (PE) - Industrial",
-      issuer: "California Board of Professional Engineers",
-      date: "2022",
-      status: "Active",
-      description: "State licensure demonstrating competency to practice engineering and sign off on engineering plans.",
-      credentialId: "CA-PE-IND-2022-9876",
-      skills: ["Engineering Ethics", "Public Safety", "Technical Leadership", "Regulatory Compliance"]
+      name: "Développeur Power BI",
+      issuer: "365 Data Science",
+      date: "2023",
+      status: "Actif",
+      description: "Certification spécialisée en développement Power BI, programmation DAX et solutions avancées d'intelligence d'affaires.",
+      credentialId: "CC-8C6C5952B4",
+      verificationUrl: "https://learn.365datascience.com/certificates/CC-8C6C5952B4/", // Add 365 Data Science verification URL here when available
+      skills: ["Développement Power BI", "DAX", "Modélisation de Données", "Intelligence d'Affaires"]
+    },
+    {
+      name: "Excel/VBA for Creative Problem Solving ",
+      issuer: "Coursera",
+      date: "2024",
+      status: "Actif",
+      description: "Maîtrise des tableaux, chaînes de texte, automatisation de tâches Excel et création de formulaires interactifs via VBA.",
+      credentialId: "AE5BCXUG55UQ",
+      verificationUrl: "https://www.coursera.org/account/accomplishments/verify/AE5BCXUG55UQ", // Add your Google verification URL here when available
+      skills: ["Spreadsheet Software", "Visual Basic (Programming Language)", "Automation", "Data Structures", "Excel Macros", "Data Import/Export"]
     }
   ];
 
-  const upcomingCertifications = [
-    {
-      name: "Certified Supply Chain Professional (CSCP)",
-      issuer: "APICS",
-      expectedDate: "Q2 2024",
-      progress: 75
-    },
-    {
-      name: "AWS Certified Cloud Practitioner",
-      issuer: "Amazon Web Services",
-      expectedDate: "Q1 2024",
-      progress: 60
+
+
+  const handleVerification = (cert) => {
+    if (cert.verificationUrl) {
+      window.open(cert.verificationUrl, '_blank', 'noopener,noreferrer');
+    } else {
+      // Fallback: show credential ID for manual verification
+      alert(`ID du diplôme : ${cert.credentialId}\nVeuillez vérifier manuellement sur le site web de ${cert.issuer}.`);
     }
-  ];
+  };
 
   return (
     <section id="certifications" className="py-20 bg-secondary/20">
@@ -65,11 +75,11 @@ const CertificationsSection = () => {
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Certifications & <span className="gradient-primary bg-clip-text text-transparent">Credentials</span>
+             Mes Certifications  <span className="gradient-primary bg-clip-text text-transparent"></span>
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
             <p className="text-xl text-muted-foreground">
-              Professional certifications demonstrating expertise and commitment to continuous learning
+              Une vitrine de mon développement professionnel et de mon engagement envers l'apprentissage continu.
             </p>
           </div>
 
@@ -77,7 +87,7 @@ const CertificationsSection = () => {
           <div className="mb-16">
             <h3 className="text-2xl font-semibold text-foreground mb-8 flex items-center gap-3">
               <Award className="h-6 w-6 text-primary" />
-              Active Certifications
+              Certifications Actives
             </h3>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -103,6 +113,20 @@ const CertificationsSection = () => {
                         </Badge>
                       </div>
 
+                      {/* Verification Status */}
+                      <div className="flex items-center gap-2">
+                        {cert.verificationUrl ? (
+                          <Badge variant="outline" className="bg-blue-500/20 text-blue-400 border-blue-500/30">
+                            <ExternalLink className="h-3 w-3 mr-1" />
+                            Vérifiable en Ligne
+                          </Badge>
+                        ) : (
+                          <Badge variant="outline" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
+                            Vérification Manuelle Requise
+                          </Badge>
+                        )}
+                      </div>
+
                       {/* Description */}
                       <p className="text-muted-foreground text-sm leading-relaxed">
                         {cert.description}
@@ -112,17 +136,17 @@ const CertificationsSection = () => {
                       <div className="space-y-2 text-sm">
                         <div className="flex items-center gap-2 text-muted-foreground">
                           <Calendar className="h-4 w-4" />
-                          <span>Obtained: {cert.date}</span>
+                          <span>Obtenu : {cert.date}</span>
                         </div>
                         <div className="flex items-center gap-2 text-muted-foreground">
                           <Award className="h-4 w-4" />
-                          <span>ID: {cert.credentialId}</span>
+                          <span>ID : {cert.credentialId}</span>
                         </div>
                       </div>
 
                       {/* Skills */}
                       <div>
-                        <p className="text-sm font-medium text-foreground mb-2">Related Skills:</p>
+                        <p className="text-sm font-medium text-foreground mb-2">Compétences associées :</p>
                         <div className="flex flex-wrap gap-1">
                           {cert.skills.map((skill, skillIndex) => (
                             <Badge 
@@ -138,12 +162,17 @@ const CertificationsSection = () => {
 
                       {/* Action */}
                       <Button 
+                        onClick={() => handleVerification(cert)}
                         variant="outline" 
                         size="sm" 
-                        className="w-full border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
+                        className={`w-full transition-spring ${
+                          cert.verificationUrl 
+                            ? "border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground" 
+                            : "border-muted-foreground/30 text-muted-foreground hover:bg-muted"
+                        }`}
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
-                        Verify Credential
+                        {cert.verificationUrl ? "Vérifier en Ligne" : "Voir le Diplôme"}
                       </Button>
                     </div>
                   </CardContent>
@@ -152,51 +181,9 @@ const CertificationsSection = () => {
             </div>
           </div>
 
-          {/* Upcoming Certifications */}
-          <div>
-            <h3 className="text-2xl font-semibold text-foreground mb-8 flex items-center gap-3">
-              <Calendar className="h-6 w-6 text-primary" />
-              In Progress
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {upcomingCertifications.map((cert, index) => (
-                <Card 
-                  key={index}
-                  className="bg-card/50 border-border/50 hover-glow transition-spring animate-slide-in-right"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                  <CardContent className="p-6">
-                    <div className="space-y-4">
-                      <div>
-                        <h4 className="text-lg font-semibold text-foreground mb-1">
-                          {cert.name}
-                        </h4>
-                        <p className="text-primary text-sm">{cert.issuer}</p>
-                        <p className="text-muted-foreground text-sm">Expected: {cert.expectedDate}</p>
-                      </div>
-                      
-                      <div>
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-sm text-muted-foreground">Progress</span>
-                          <span className="text-sm font-medium text-primary">{cert.progress}%</span>
-                        </div>
-                        <div className="w-full bg-secondary/50 rounded-full h-2">
-                          <div 
-                            className="bg-gradient-to-r from-primary to-primary-glow h-2 rounded-full transition-all duration-1000 ease-out"
-                            style={{ 
-                              width: `${cert.progress}%`,
-                              animationDelay: `${1 + (index * 0.3)}s`
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+        
+          
+
         </div>
       </div>
     </section>

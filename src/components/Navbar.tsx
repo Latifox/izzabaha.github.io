@@ -10,10 +10,10 @@ const Navbar = () => {
 
   const navItems = [
     { id: "hero", label: "Home", icon: User },
-    { id: "about", label: "About", icon: User },
-    { id: "education", label: "Education", icon: GraduationCap },
-    { id: "experience", label: "Experience", icon: Briefcase },
-    { id: "skills", label: "Skills", icon: Code },
+    { id: "about", label: "À Propos", icon: User },
+    { id: "education", label: "Formation", icon: GraduationCap },
+    { id: "experience", label: "Expérience", icon: Briefcase },
+    { id: "skills", label: "Compétences", icon: Code },
     { id: "certifications", label: "Certifications", icon: Award },
     { id: "contact", label: "Contact", icon: Mail }
   ];
@@ -67,7 +67,7 @@ const Navbar = () => {
           {/* Logo/Name */}
           <div className="mr-4 hidden sm:block">
             <span className="text-lg font-bold gradient-primary bg-clip-text text-transparent">
-              AR
+              IM
             </span>
           </div>
 

@@ -5,46 +5,54 @@ import { Badge } from "@/components/ui/badge";
 const ExperienceSection = () => {
   const experiences = [
     {
-      position: "Senior Industrial Engineer",
-      company: "Tesla, Inc.",
-      location: "Fremont, CA",
-      period: "2022 - Present",
-      type: "Full-time",
-      description: "Lead process optimization initiatives for Model 3 and Model Y production lines, focusing on automation integration and quality improvements.",
+      position: "Fiabilisation de manutention de Phosboucraa ( MBF sur la Stockeuse ) ",
+      company: "JESA",
+      location: "Maroc",
+      period: "Fév 2025 – Juin 2025",
+      type: "PFE",
+      logo: "https://www.jesagroup.com/asset/img/logo.png", // Replace with actual JESA logo URL
       achievements: [
-        "Reduced production cycle time by 18% through line rebalancing",
-        "Implemented predictive maintenance system reducing downtime by 25%", 
-        "Led cross-functional team of 12 engineers on battery pack assembly optimization"
+        "Évaluation des équipements de manutention via analyse de criticité",
+        "Définition de l'arborescence technique des équipements",
+        "Application de la méthode AMDEC sur systèmes critiques",
+        "Élaboration d'un plan de maintenance préventive",
+        "Création des dashboards et suivi des KPIs avec Power BI"
       ],
-      technologies: ["Lean Manufacturing", "Six Sigma", "AutoCAD", "Python", "SAP"]
+      technologies: ["MBF", "AMDEC", "Power BI","SAP", "Analyse de criticité", "Maintenance préventive", "KPIs"]
     },
     {
-      position: "Industrial Engineer",
-      company: "Boeing Commercial Airplanes",
-      location: "Seattle, WA", 
-      period: "2020 - 2022",
-      type: "Full-time",
-      description: "Optimized aircraft assembly processes and developed time studies for 737 MAX production line to improve efficiency and reduce manufacturing costs.",
+      position: "Analyse des causes de défaillance des équipements mécaniques",
+      company: "OCP Phosboucraa",
+      location: "Maroc", 
+      period: "Juil 2024 – Sept 2024",
+      type: "Stage PFA",
+      logo: "https://www.ocpgroup.ma/themes/custom/ocp_child/logo-white.svg", // Replace with actual OCP logo URL
+      description: "Analyse des causes de défaillance des équipements mécaniques pour améliorer performance et fiabilité.",
       achievements: [
-        "Designed new wing assembly process reducing labor hours by 15%",
-        "Conducted ergonomic assessments improving worker safety scores by 30%",
-        "Saved $2.3M annually through waste reduction initiatives"
+        "Découverte le processus de traitement de phosphate dans la laverie",
+        "Analyse des causes de défaillance des équipements mécaniques",
+        "Création des diagrammes de Pareto pour identifier les causes principales",
+        "Propositions et mise en œuvre de solutions pour améliorer performance et fiabilité",
+        "Collaboration avec l'équipe de maintenance",
+        "Amélioration des processus de maintenance"
       ],
-      technologies: ["CATIA", "Minitab", "Arena Simulation", "MS Project", "Kaizen"]
+      technologies: ["Pareto","AMDEC","Analyse de défaillance", "Maintenance corrective", "Fiabilité équipements", "maintenance préventive"]
     },
     {
-      position: "Junior Process Engineer",
-      company: "Intel Corporation",
-      location: "Santa Clara, CA",
-      period: "2018 - 2020",
-      type: "Full-time",
-      description: "Supported semiconductor manufacturing operations with focus on yield improvement and process standardization across multiple production facilities.",
+      position: "Stagiaire - Département de Maintenance",
+      company: "OCP Phosboucraa",
+      location: "Maroc",
+      period: "Juil 2023 – Août 2023",
+      type: "Stage d'initiation",
+      logo: "https://www.ocpgroup.ma/themes/custom/ocp_child/logo-white.svg", // Replace with actual OCP logo URL
+      description: "Participation à la maintenance préventive et corrective avec acquisition de connaissances pratiques en gestion de maintenance.",
       achievements: [
-        "Improved chip yield by 8% through statistical process control",
-        "Standardized cleanroom procedures across 3 manufacturing sites",
-        "Trained 25+ technicians on new quality protocols"
+        "Participation à la maintenance préventive et corrective",
+        "Acquisition de connaissances pratiques en gestion de maintenance",
+        "Découverte des processus industriels",
+        "Formation aux bonnes pratiques de maintenance"
       ],
-      technologies: ["JMP", "SPC", "DOE", "FMEA", "ISO Standards"]
+      technologies: ["Maintenance préventive", "Maintenance corrective", "Gestion maintenance", "Processus industriels"]
     }
   ];
 
@@ -60,11 +68,11 @@ const ExperienceSection = () => {
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Professional <span className="gradient-primary bg-clip-text text-transparent">Experience</span>
+              Expérience <span className="gradient-primary bg-clip-text text-transparent">Professionnelle</span>
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
             <p className="text-xl text-muted-foreground">
-              Driving operational excellence across leading technology companies
+            Favoriser l'excellence opérationnelle dans les principales entreprises technologiques 
             </p>
           </div>
 
@@ -80,10 +88,22 @@ const ExperienceSection = () => {
                 >
                   <CardContent className="p-8">
                     <div className="flex flex-col lg:flex-row gap-6">
-                      {/* Icon & Timeline */}
+                      {/* Company Logo & Timeline */}
                       <div className="flex-shrink-0 flex flex-col items-center">
-                        <div className="w-16 h-16 gradient-primary rounded-full flex items-center justify-center shadow-glow mb-4">
-                          <Icon className="h-8 w-8 text-primary-foreground" />
+                        <div className="relative w-16 h-16 mb-4">
+                          <img
+                            src={exp.logo}
+                            alt={`${exp.company} logo`}
+                            className="w-full h-full object-contain rounded-lg border border-border/50 bg-background/80 p-2 shadow-md hover:shadow-lg transition-all duration-300"
+                            onError={(e) => {
+                              // Fallback to icon if logo fails to load
+                              e.currentTarget.style.display = 'none';
+                              e.currentTarget.nextElementSibling.style.display = 'flex'; 
+                            }}
+                          />
+                          <div className="w-16 h-16 gradient-primary rounded-lg flex items-center justify-center shadow-glow absolute top-0 left-0" style={{ display: 'none' }}>
+                            <Icon className="h-8 w-8 text-primary-foreground" />
+                          </div>
                         </div>
                         {index < experiences.length - 1 && (
                           <div className="w-px h-24 bg-gradient-to-b from-primary to-transparent"></div>
@@ -99,7 +119,7 @@ const ExperienceSection = () => {
                               {exp.position}
                             </h3>
                             <Badge variant="secondary" className="w-fit">
-                              {exp.type}
+                              {exp.type.toUpperCase()}
                             </Badge>
                           </div>
                           
@@ -126,7 +146,7 @@ const ExperienceSection = () => {
 
                         {/* Achievements */}
                         <div>
-                          <h4 className="text-lg font-semibold text-foreground mb-3">Key Achievements</h4>
+                          <h4 className="text-lg font-semibold text-foreground mb-3">Réalisations</h4>
                           <div className="space-y-2">
                             {exp.achievements.map((achievement, achievementIndex) => (
                               <div key={achievementIndex} className="flex items-start gap-3">
@@ -139,7 +159,7 @@ const ExperienceSection = () => {
 
                         {/* Technologies */}
                         <div>
-                          <h4 className="text-lg font-semibold text-foreground mb-3">Technologies & Methods</h4>
+                          <h4 className="text-lg font-semibold text-foreground mt-6 mb-3">Technologies Utilisées</h4>
                           <div className="flex flex-wrap gap-2">
                             {exp.technologies.map((tech, techIndex) => (
                               <Badge 

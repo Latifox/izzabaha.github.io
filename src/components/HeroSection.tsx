@@ -1,6 +1,6 @@
-import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import alexPortrait from "@/assets/alex-portrait.jpg";
+import izzabahaPortrait from "@/assets/izzabaha.jpg";
 
 const HeroSection = () => {
   return (
@@ -16,40 +16,51 @@ const HeroSection = () => {
           <div className="flex-1 text-center lg:text-left space-y-8 animate-slide-in-left">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="text-foreground">Alex</span>{" "}
-                <span className="gradient-primary bg-clip-text text-transparent">Rodriguez</span>
+                <span className="text-foreground">Mouad</span>{" "}
+                <span className="gradient-primary bg-clip-text text-transparent">Izzabaha</span>
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground font-light">
-                Industrial Engineer
+                Ingénieur d'État en Génie Industriel
               </p>
               <div className="w-24 h-1 bg-primary mx-auto lg:mx-0 rounded-full"></div>
             </div>
             
             <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Passionate about optimizing processes, designing efficient systems, and driving 
-              operational excellence through data-driven solutions and innovative engineering approaches.
+              Passionné par la maintenance industrielle, l'optimisation des processus et l'analyse de données. 
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button className="gradient-primary hover-glow transition-spring text-lg px-8 py-3">
-                <Download className="mr-2 h-5 w-5" />
-                Download Resume
-              </Button>
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-spring text-lg px-8 py-3">
-                View Projects
+              <Button asChild className="gradient-primary hover-glow transition-spring text-lg px-8 py-3">
+                <a href="/assets/izzabaha.pdf" download className="flex items-center">
+                  <Download className="mr-2 h-5 w-5" />
+                  Télécharger le CV
+                </a>
               </Button>
             </div>
             
+            {/* Social Media Buttons */}
             <div className="flex gap-6 justify-center lg:justify-start">
-              <Button variant="ghost" size="icon" className="hover-scale transition-spring hover:text-primary">
-                <Github className="h-6 w-6" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover-scale transition-spring hover:text-primary">
-                <Linkedin className="h-6 w-6" />
-              </Button>
-              <Button variant="ghost" size="icon" className="hover-scale transition-spring hover:text-primary">
-                <Mail className="h-6 w-6" />
-              </Button>
+              {/* LinkedIn Button */}
+              <a 
+                href="https://www.linkedin.com/in/mouad-izzabaha-0a4916247/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Se connecter sur LinkedIn"
+              >
+                <Button variant="ghost" size="icon" className="hover-scale transition-spring hover:text-primary">
+                  <Linkedin className="h-6 w-6" />
+                </Button>
+              </a>
+              
+              {/* Mail Button */}
+              <a 
+                href="mailto:mouadizzabaha70@gmail.com"
+                aria-label="Envoyer un e-mail"
+              >
+                <Button variant="ghost" size="icon" className="hover-scale transition-spring hover:text-primary">
+                  <Mail className="h-6 w-6" />
+                </Button>
+              </a>
             </div>
           </div>
           
@@ -58,13 +69,13 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-card border-4 border-primary/20 hover-glow transition-spring">
                 <img 
-                  src={alexPortrait} 
-                  alt="Alex Rodriguez - Industrial Engineer" 
+                  src={izzabahaPortrait} 
+                  alt="Mouad Izzabaha - Industrial Engineer" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 gradient-primary rounded-full flex items-center justify-center shadow-glow animate-pulse-glow">
-                <span className="text-2xl font-bold text-primary-foreground">IE</span>
+                <span className="text-2xl font-bold text-primary-foreground">IM</span>
               </div>
             </div>
           </div>

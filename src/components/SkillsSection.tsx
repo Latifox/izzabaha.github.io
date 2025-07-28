@@ -5,47 +5,47 @@ import { Progress } from "@/components/ui/progress";
 const SkillsSection = () => {
   const skillCategories = [
     {
-      title: "Technical Skills",
+      title: "Génie Industriel ",
+      icon: Settings,
+      skills: [
+        { name: "Gestion de Maintenance", level: 90 },
+        { name: "Six Sigma", level: 85 },
+        { name: "Gestion de Production", level: 80 },
+        { name: "Gestion de Projet", level: 85 },
+        { name: "Management de la Qualité", level: 85 },
+        { name: "Amélioration continue : KAIZEN, 5S et PDCA", level: 90},
+      ]
+    },
+    {
+      title: "Programmation & Développement",
       icon: Code,
       skills: [
-        { name: "Lean Manufacturing", level: 95 },
-        { name: "Six Sigma", level: 90 },
-        { name: "Process Optimization", level: 92 },
-        { name: "Statistical Analysis", level: 88 },
-        { name: "Supply Chain Management", level: 85 }
-      ]
-    },
-    {
-      title: "Software & Tools",
-      icon: Cpu,
-      skills: [
         { name: "Python", level: 85 },
-        { name: "AutoCAD", level: 88 },
-        { name: "Minitab", level: 90 },
-        { name: "SAP", level: 82 },
-        { name: "Arena Simulation", level: 80 }
+        { name: "VBA", level: 80 },
+        { name: "R", level: 75 },
+        { name: "SQL", level: 75 },
       ]
     },
     {
-      title: "Analytics & Modeling",
+      title: "Outils de Données & d'Analyse",
       icon: BarChart3,
       skills: [
-        { name: "Statistical Process Control", level: 92 },
-        { name: "Design of Experiments", level: 88 },
-        { name: "Operations Research", level: 85 },
-        { name: "Data Visualization", level: 83 },
-        { name: "Predictive Modeling", level: 80 }
+        { name: "Power BI", level: 90 },
+        { name: "Tableau", level: 75 },
+        { name: "DAX", level: 85 },
+        { name: "Microsoft Excel", level: 95 },
+        { name: "Google Sheets", level: 85 }
       ]
     },
     {
-      title: "Management & Leadership",
-      icon: Users,
+      title: "CAO/FAO & Simulation",
+      icon: Cpu,
       skills: [
-        { name: "Project Management", level: 90 },
-        { name: "Team Leadership", level: 88 },
-        { name: "Change Management", level: 85 },
-        { name: "Cross-functional Collaboration", level: 92 },
-        { name: "Training & Development", level: 86 }
+        { name: "CATIA V5", level: 80 },
+        { name: "Simulation Arena", level: 75 },
+        { name: "Métrologie 3D", level: 70 },
+        { name: "Suivie de calibration", level: 85 },
+        { name: "Vérifications Périodiques", level: 90 }
       ]
     }
   ];
@@ -57,11 +57,11 @@ const SkillsSection = () => {
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Skills & <span className="gradient-primary bg-clip-text text-transparent">Expertise</span>
+              Compétences Techniques & <span className="gradient-primary bg-clip-text text-transparent">Expertise</span>
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8"></div>
             <p className="text-xl text-muted-foreground">
-              Comprehensive skill set combining technical expertise with leadership capabilities
+              Une vitrine de mes capacités et de mon expertise techniques.
             </p>
           </div>
 
@@ -94,9 +94,7 @@ const SkillsSection = () => {
                             <span className="text-muted-foreground font-medium">
                               {skill.name}
                             </span>
-                            <span className="text-primary font-semibold">
-                              {skill.level}%
-                            </span>
+
                           </div>
                           <div className="relative">
                             <Progress 
@@ -125,18 +123,18 @@ const SkillsSection = () => {
             {[
               {
                 icon: Settings,
-                title: "Process Engineering",
-                description: "Advanced knowledge in manufacturing process design and optimization"
+                title: "Optimisation des Processus",
+                description: "Connaissance avancée de la conception et de l'optimisation des processus de fabrication"
               },
               {
                 icon: Lightbulb,
                 title: "Innovation",
-                description: "Creative problem-solving with focus on continuous improvement"
+                description: "Résolution créative de problèmes avec un focus sur l'amélioration continue"
               },
               {
                 icon: BarChart3,
-                title: "Quality Systems",
-                description: "Expert in quality management systems and statistical quality control"
+                title: "SMQ",
+                description: "Connaissance des normes ISO et des méthodes de contrôle qualité basées sur l’analyse statistique."
               }
             ].map((highlight, index) => {
               const Icon = highlight.icon;

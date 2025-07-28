@@ -9,45 +9,38 @@ const Footer = () => {
           {/* Main Content */}
           <div className="space-y-4 animate-fade-in">
             <h3 className="text-2xl font-semibold text-foreground">
-              Let's Work Together
+              Travaillons Ensemble
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              I'm always interested in discussing new opportunities, innovative projects, 
-              and ways to optimize processes. Feel free to reach out!
+              Je suis toujours ouvert à la discussion de nouvelles opportunités, de projets innovants et de moyens d'optimiser les processus. N'hésitez pas à me contacter !
             </p>
           </div>
-
+          
           {/* Contact Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-in-left">
-            <Button className="gradient-primary hover-glow transition-spring">
-              <Mail className="mr-2 h-5 w-5" />
-              alex.rodriguez@email.com
-            </Button>
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-spring">
-              <Linkedin className="mr-2 h-5 w-5" />
-              Connect on LinkedIn
-            </Button>
+            {/* Email Button */}
+            <a href="mailto:mouadizzabaha70@gmail.com">
+              <Button className="gradient-primary hover-glow transition-spring">
+                <Mail className="mr-2 h-5 w-5" />
+                mouadizzabaha70@gmail.com
+              </Button>
+            </a>
+            
+            {/* LinkedIn Button */}
+            <a href="https://www.linkedin.com/in/mouad-izzabaha-0a4916247/" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-spring">
+                <Linkedin className="mr-2 h-5 w-5" />
+                Se connecter sur LinkedIn
+              </Button>
+            </a>
           </div>
-
-          {/* Social Links */}
-          <div className="flex gap-4 justify-center animate-slide-in-right">
-            <Button variant="ghost" size="icon" className="hover-scale transition-spring hover:text-primary">
-              <Github className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="hover-scale transition-spring hover:text-primary">
-              <Linkedin className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="hover-scale transition-spring hover:text-primary">
-              <Mail className="h-5 w-5" />
-            </Button>
-          </div>
-
+          
           {/* Copyright */}
           <div className="pt-8 border-t border-border">
             <p className="text-muted-foreground text-sm flex items-center justify-center gap-2">
-              © 2024 Alex Rodriguez. Made with 
+              © 2025 Izzabaha. Fait avec 
               <Heart className="h-4 w-4 text-red-500 animate-pulse" />
-              and engineering precision.
+              et une précision ingénieure.
             </p>
           </div>
         </div>
